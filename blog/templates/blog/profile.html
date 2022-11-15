@@ -1,0 +1,11 @@
+{% extends "blog/base.html" %}
+{% block title %}Profile Page{% endblock title %}
+{% block content %}
+    <div class="row my-3 p-3">
+        <h3>This is the profile page for {{user.username}}</h3>
+        <p>BIO : {{user.bio}}</p>
+        <p>AVA : {{user.ava}}</p>
+
+    </div>
+
+{% endblock content %}

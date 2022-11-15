@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-5hb+3s=qi3+pbom*m7$erkx7i0xt-+7tfs=ic$bxrte$uojz@g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG =True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -52,12 +52,14 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'merge.urls'
+AUTH_USER_MODEL = "blog.User"
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
         'APP_DIRS': True,
+        "DIRS": [BASE_DIR / "templates"],
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -120,6 +122,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
